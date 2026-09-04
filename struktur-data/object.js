@@ -95,4 +95,30 @@ const account = {
 
 account.isBanned = true; //Mengubah Value Property isBanned Menjadi True
 console.info("MENGUBAH VALUE PROPERTY PADA OBJECT");
-console.log(isBanned); //true
+console.log(account.isBanned); //true
+
+// Menghapus property pada object pakai keyword delete
+console.info("MENGHAPUS VALUE PROPERTY PADA OBJECT DENGAN KEYWORD delete");
+console.log(account);
+delete account.username;
+console.log(account);
+
+// Menabah property pada object
+account.category = "Education";
+console.info("MENAMBAH VALUE PROPERTY PADA OBJEct DENGAN DOT NOTATION(.)");
+console.log(account);
+
+console.info(
+  "MENAMBAH DAN MENGHAPUS VALUE PROPERTY PADA OBJEct DENGAN SQUARE BRACKET ([])",
+);
+account["role"] = "admin";
+console.log(account);
+delete account["role"];
+console.log(account);
+
+console.info(
+  "MENAMBAH VALUE PROPERTY PADA OBJEct DENGAN DISTRUCTURING OBJECT  ({})",
+);
+const { masaBerlaku = 10 } = account;
+console.log(masaBerlaku);
+console.log(account);
